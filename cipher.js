@@ -2,6 +2,8 @@ console.log("Hey There! time to solve a cipher! \n");
 
 function cipherInput(input) {
 
+    let newChar;
+
     console.log(`This is the original input ${input} \n`);
 
     input.toUpperCase();
@@ -25,6 +27,8 @@ function cipherInput(input) {
         } else if (characterAsciiCode <=77 && characterAsciiCode >=65) {
 
             console.log("Yo it's in the first half holmes! \n")
+
+            console.log(`the new char should be ${characterAsciiCode + 13}`);
 
         } else {
             console.log("Special Character dude! \n")
