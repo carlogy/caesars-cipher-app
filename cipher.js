@@ -35,8 +35,14 @@ function cipherInput(input) {
 
             console.log(`the new char should be ${characterAsciiCode + 13}`);
 
+            newChar = String.fromCharCode(characterAsciiCode + 13);
+
+            console.log(`The new char should be ${newChar}`);
+
         } else {
+
             console.log("Special Character dude! \n")
+
         }
 
 
