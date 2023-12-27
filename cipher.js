@@ -10,6 +10,8 @@ function cipherInput(input) {
 
     const inputStack = input.split('');
 
+    const updatedCipherString = [];
+
     console.log("The inputStack is: ", inputStack, "\n" );
 
     for (const char of inputStack) {
@@ -18,7 +20,7 @@ function cipherInput(input) {
 
         console.log(`char: ${char} \n ASCII value ${char.charCodeAt()} \n`);
 
-        if (characterAsciiCode <= 90 && characterAsciiCode >=78) {
+        if (characterAsciiCode <= 90 && characterAsciiCode >= 78) {
 
             console.log("It's in the second half holmes! \n");
 
@@ -28,8 +30,10 @@ function cipherInput(input) {
 
             console.log(`The new char should be ${newChar} \n `);
 
+            updatedCipherString.push(newChar);
 
-        } else if (characterAsciiCode <=77 && characterAsciiCode >=65) {
+
+        } else if (characterAsciiCode <=77 && characterAsciiCode >= 65) {
 
             console.log("Yo it's in the first half holmes! \n")
 
@@ -39,22 +43,18 @@ function cipherInput(input) {
 
             console.log(`The new char should be ${newChar}`);
 
+            updatedCipherString.push(newChar);
+
         } else {
 
             console.log("Special Character dude! \n")
+            updatedCipherString.push(char);
 
         }
 
-
-
-
-
     }
 
-    console.log()
+    console.log(updatedCipherString);
 }
-
-
-
 
 cipherInput("SERR PBQR PNZC");
